@@ -17,12 +17,19 @@ module.exports = {
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
-    `gatsby-transformer-sharp`,
+    "gatsby-transformer-sharp",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog`,
       },
     },
     {
@@ -43,5 +50,6 @@ module.exports = {
         precachePages: [`/`, `/blog/*`, `/about`],
       },
     },
+    "gatsby-plugin-mdx",
   ],
 };

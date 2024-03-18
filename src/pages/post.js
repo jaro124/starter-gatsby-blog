@@ -1,8 +1,8 @@
-import * as React from "react";
-import { Link } from "gatsby";
-import Layout from "../components/core/layout";
-import { Seo } from "../components/core/seo";
-import { StaticImage } from "gatsby-plugin-image";
+import * as React from "react"
+import { Link } from "gatsby"
+import Layout from "../components/core/layout"
+import Seo from "../components/core/seo"
+import { StaticImage } from "gatsby-plugin-image"
 
 const PostPage = () => {
   return (
@@ -43,6 +43,6 @@ const PostPage = () => {
   );
 };
 
-export default PostPage;
+export default PostPage
 
-export const Head = () => <Seo title="Post page" />;
+export const Head = () => <Seo title="Post page" />

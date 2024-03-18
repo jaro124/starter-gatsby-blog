@@ -1,8 +1,8 @@
-import * as React from "react";
-import { Link } from "gatsby";
-import Layout from "../components/core/layout";
-import Hero from "../components/hero";
-import { Seo } from "../components/core/seo";
+import * as React from "react"
+import { Link } from "gatsby"
+import Layout from "../components/core/layout"
+import Hero from "../components/hero"
+import Seo  from "../components/core/seo"
 
 const IndexPage = () => {
   return (
@@ -65,8 +65,8 @@ const IndexPage = () => {
       </div>
     </Layout>
   );
-};
+}
 
-export default IndexPage;
+export const Head = () => <Seo title="Home page" />
 
-export const Head = () => <Seo title="Home page" />;
+export default IndexPage

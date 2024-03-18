@@ -1,9 +1,10 @@
-import * as React from "react";
-import { Link } from "gatsby";
+import * as React from "react"
+import { graphql } from "gatsby"
+import { Link } from "gatsby"
 import Layout from "../components/core/layout"
-import { Seo } from "../components/core/seo";
+import Seo  from "../components/core/seo"
 
-const BlogPage = () => {
+const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="Blog Page">
       <div className="px-4">
@@ -14,32 +15,41 @@ const BlogPage = () => {
           <h2 className="font-medium text-sm text-indigo-400 mb-4 uppercase tracking-wide">
             List posts
           </h2>
-          <p className="text-primary">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum illo
-            cupiditate molestias atque consequuntur ea quo cumque, odit velit
-            sint similique? Asperiores ratione aperiam tempora, alias corrupti
-            deleniti quaerat molestiae.
-          </p>
-          <p className="text-primary">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum illo
-            cupiditate molestias atque consequuntur ea quo cumque, odit velit
-            sint similique? Asperiores ratione aperiam tempora, alias corrupti
-            deleniti quaerat molestiae.
-          </p>
-          <div className="mt-4">
-            <button
-              aria-label="Back to home page"
-              className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-4 mt-2"
-            >
-              <Link to="/">Back to home page</Link>
-            </button>
-          </div>
+
+          {data.allMdx.nodes.map((node) => (
+            <article key={node.id}>
+              <Link to={node.frontmatter.slug}>
+                <h2 className="text-2xl text-indigo-700 pt-4">
+                  {node.frontmatter.title}
+                </h2>
+              </Link>
+
+              <p>Posted: {node.frontmatter.date}</p>
+              <p>{node.excerpt}</p>
+            </article>
+          ))}
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
+
+export const query = graphql`
+  query {
+    allMdx(sort: { frontmatter: { date: DESC } }) {
+      nodes {
+        frontmatter {
+          date(formatString: "MMMM D, YYYY")
+          title
+          slug
+        }
+        id
+        excerpt
+      }
+    }
+  }
+`;
 
 export default BlogPage
 
-export const Head = () => <Seo title="Blog page" />;
+export const Head = () => <Seo title="Blog page" />

@@ -1,7 +1,7 @@
-import * as React from "react";
-import { Link } from "gatsby";
-import Layout from "../components/core/layout";
-import { Seo } from "../components/core/seo";
+import * as React from "react"
+import { Link } from "gatsby"
+import Layout from "../components/core/layout"
+import Seo  from "../components/core/seo"
 
 const AboutPage = () => {
   return (
@@ -46,6 +46,6 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default AboutPage
 
-export const Head = () => <Seo title="About page" />;
+export const Head = () => <Seo title="About page" />
