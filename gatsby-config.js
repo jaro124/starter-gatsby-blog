@@ -51,5 +51,13 @@ module.exports = {
       },
     },
     "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: "/images/svg-icons/" 
+        }
+      }
+    }
   ],
 };
