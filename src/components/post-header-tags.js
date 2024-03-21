@@ -1,16 +1,16 @@
 import React from "react";
-import TagsIcon from "!svg-react-loader!../images/svg-icons/tags.svg?name=TagsIcon";
+import { TagIcon } from "@heroicons/react/24/outline";
 
 const PostTags = ({ tags }) => {
   return (
     <div>
       <div className="flex flex-wrap text-xs text-gray-500 uppercase justify-start md:justify-end">
-        <div className="pt-1">
-          <TagsIcon />
+        <div>
+        <TagIcon className="h-5 w-5 text-gray-500" />
         </div>
         {tags.map((tag, index) => (
           <div className="pl-2" key={index}>
-            &nbsp;#{tag}
+            #{tag}
           </div>
         ))}
       </div>

@@ -4,7 +4,7 @@ import PostTags from "./post-header-tags"
 
 const PostHeader = ({ title, subtitle, date, tags }) => (
   <div>  
-    <h1 className="text-4xl font-medium text-indigo-800 text-primary mb-2">{title}</h1>
+    <h1 className="text-4xl font-medium text-indigo-800 dark:text-gray-400 mb-2">{title}</h1>
     <h2 className="font-medium text-sm text-indigo-400 mb-4 uppercase tracking-wide">{subtitle}</h2>
 
     <div className="flex flex-wrap justify-between mt-4 w-full">
@@ -16,7 +16,7 @@ const PostHeader = ({ title, subtitle, date, tags }) => (
       </div>
     </div>
     
-    <hr className="border-1 mb-4 border-indigo-400" />
+    <hr className="border-1 mt-2 mb-4 border-indigo-400" />
 
 </div>
 )

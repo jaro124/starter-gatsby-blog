@@ -1,14 +1,16 @@
 import React from "react";
-import ClockIcon from "!svg-react-loader!../images/svg-icons/clock.svg?name=ClockIcon";
+import { CalendarDaysIcon } from "@heroicons/react/24/outline";
 
 const PostDate = ({ date }) => (
   <div>
-    <div>
-      <p className="text-xs text-gray-500 flex items-center pb-3 pr-8">
-        <ClockIcon />
-        {date}
-      </p>
-    </div>
+    <div className="flex flex-wrap text-xs text-gray-500 uppercase justify-start">
+        <div>
+        <CalendarDaysIcon className="h-5 w-5 text-gray-500" />
+        </div>
+          <div className="pl-2">
+            {date}
+          </div>
+      </div>
   </div>
 );
 

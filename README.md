@@ -33,14 +33,19 @@
 
     Edit `src/pages/index.js` to see your site update in real-time!
 
-4.  **Learn more**
+4. **Built using**
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    - [TailwindCSS](https://tailwindcss.com)
+    - [MDX](https://mdxjs.com)
+    - [Prism](https://prismjs.com/)
+    - [Heroicons](https://heroicons.com)
+
+5. **Contains**
+
+    - layout, header, footer components
+    - light/dark mode
+    - posts in mdx files
+    - code syntax coloring with copy button
 
 ## 🚀 Quick start (Netlify)
 
