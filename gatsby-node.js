@@ -10,11 +10,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     query MyQuery {
       allMdx (sort: {frontmatter: {date: DESC}}) {
         edges {
-          previous {
-            frontmatter {
-              slug
-            }
-          }
           node {
             frontmatter {
               slug
@@ -25,12 +20,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             id
           }
-          next {
-            frontmatter {
-              slug
-            }
-          }
-          
         }
       }
     }

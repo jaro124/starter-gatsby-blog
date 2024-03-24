@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Starter Gatsby Zero`,
+    title: `Starter Gatsby Blog`,
     titleTemplate: "%s · Starter bolg",
     description: `Gatsby and Tailwindcss starter`,
     keywords: [`gatsby`, `tailwind`, `react`, `tailwindcss`],

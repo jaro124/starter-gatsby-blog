@@ -55,7 +55,7 @@ const PostListTemplate = ({
               <div className="mt-4">
                 <button
                   aria-label="Read post"
-                  className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-4 mt-2"
+                  className="bg-transparent hover:bg-blue-500 text-blue-700 dark:text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-4 mt-2"
                 >
                   <Link to={"/blog/" + edge.node.frontmatter.slug}>
                     Read more
